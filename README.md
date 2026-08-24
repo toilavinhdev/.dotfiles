@@ -19,8 +19,9 @@ sudo dnf install stow -y
 ```
 .
 ├── tmux/.tmux.conf
-├── nvim/.config/nvim/    (coming soon)
-└── git/.gitconfig         (coming soon)
+├── zsh/.zshrc
+├── git/.gitconfig
+└── ...
 ```
 
 Each top-level directory is a stow package. The directory structure mirrors `$HOME`.
@@ -29,10 +30,10 @@ Each top-level directory is a stow package. The directory structure mirrors `$HO
 
 ```bash
 # Symlink all packages
-stow */
+stow -v */
 
 # Symlink a specific package
-stow tmux
+stow -v tmux
 
 # Unsymlink
 stow -D tmux

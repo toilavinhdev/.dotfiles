@@ -1,0 +1,6 @@
+# .zprofile is used for login shells
+# Basically, it’s identical to .zlogin, which we’ll cover later
+# However, .zlogin is sourced after .zshrc
+
+# OpenCode
+export PATH="$HOME/.opencode/bin:$PATH"
