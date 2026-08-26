@@ -4,7 +4,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="toilavinhdev"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
