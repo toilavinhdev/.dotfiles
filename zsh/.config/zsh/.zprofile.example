@@ -2,11 +2,9 @@
 # Basically, it’s identical to .zlogin, which we’ll cover later
 # However, .zlogin is sourced after .zshrc
 
-# Current User
+# Path
 export PATH="$HOME/.local/bin:$PATH"
-
-# OpenCode
-export PATH="$HOME/.opencode/bin:$PATH"
+# export PATH="$HOME/.opencode/bin:$PATH"
 
 # Alias
-alias tmux="tmux -f $HOME/.config/tmux/.tmux.conf"
+alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
