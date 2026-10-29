@@ -1,5 +1,39 @@
 # Zsh Configuration
 
+## Install
+
+### 1. Zsh
+
+```
+sudo apt-get install zsh
+```
+
+### 2. Set default shell
+
+```
+chsh -s $(which zsh)
+```
+```
+exit
+```
+
+### 3. Create symbol link
+```
+stow -v zsh
+mv ~/.oh-my-zsh ~/.config/oh-my-zsh
+```
+
+### 4. Oh My Zsh
+
+```
+sudo curl -L http://install.ohmyz.sh | sh
+```
+
+### 5. Reload configuration
+```
+source ~/.zshenv
+```
+
 ## File Overview
 
 | File | Description |
