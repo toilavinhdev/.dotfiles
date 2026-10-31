@@ -1,10 +1,14 @@
 # .zprofile is used for login shells
 # Basically, it’s identical to .zlogin, which we’ll cover later
 # However, .zlogin is sourced after .zshrc
+# cp .zprofile.example .zprofile
 
-# Path
-export PATH="$HOME/.local/bin:$PATH"
+# path
 # export PATH="$HOME/.opencode/bin:$PATH"
 
-# Alias
-alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
+# alias
+alias szshenv="source $HOME/.zshenv"
+alias szsh="source $ZDOTDIR/.zshrc"
+alias szprofile="source $ZDOTDIR/.zprofile"
+# alias lzg="lazygit"
+# alias lzd="lazydocker"

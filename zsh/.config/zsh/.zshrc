@@ -1,5 +1,8 @@
 # .zshrc is used for interactive shells
 
+# binaries
+export PATH="$HOME/.local/bin:$PATH"
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.config/.oh-my-zsh"
 
