@@ -8,7 +8,7 @@
 
 # alias
 alias szshenv="source $HOME/.zshenv"
-alias szsh="source $ZDOTDIR/.zshrc"
+alias szshrc="source $ZDOTDIR/.zshrc"
 alias szprofile="source $ZDOTDIR/.zprofile"
 # alias lzg="lazygit"
 # alias lzd="lazydocker"
