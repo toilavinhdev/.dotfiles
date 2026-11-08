@@ -7,8 +7,5 @@
 # export PATH="$HOME/.opencode/bin:$PATH"
 
 # alias
-alias szshenv="source $HOME/.zshenv"
-alias szshrc="source $ZDOTDIR/.zshrc"
-alias szprofile="source $ZDOTDIR/.zprofile"
 # alias lzg="lazygit"
 # alias lzd="lazydocker"

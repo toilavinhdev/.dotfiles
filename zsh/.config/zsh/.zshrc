@@ -1,22 +1,22 @@
 # .zshrc is used for interactive shells
 
-# binaries
-export PATH="$HOME/.local/bin:$PATH"
+# load config files
+if [ -d "$ZDOTDIR/conf.d" ]; then
+  for file in "$ZDOTDIR/conf.d/"*.zsh; do
+    [ -r "$file" ] && source "$file"
+  done
+  unset file
+fi
 
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.config/.oh-my-zsh"
+# load function files
+if [ -d "$ZDOTDIR/func.d" ]; then
+  for file in "$ZDOTDIR/func.d/"*.zsh; do
+    [ -r "$file" ] && source "$file"
+  done
+  unset file
+fi
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="toilavinhdev"
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git zsh-autosuggestions)
-
-# Load Oh My Zsh
-source $ZSH/oh-my-zsh.sh
-
-# Uptime status
+# uptime status
 echo -e "
   \033[1;30muser @ host :\033[0m $(whoami)@$(hostname)
   \033[1;30mos          :\033[0m $(lsb_release -d | cut -f2)
@@ -28,6 +28,3 @@ echo -e "
 
   \033[30m███\033[31m███\033[32m███\033[33m███\033[34m███\033[35m███\033[36m███\033[37m███\033[0m
 "
-
-# Entry directory
-cd ~
