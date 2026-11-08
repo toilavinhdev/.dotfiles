@@ -1,0 +1,90 @@
+[core]
+	# convert crlf to lf on commit (use "true" on windows)
+	autocrlf = input
+	# cache untracked files to speed up git status
+	untrackedCache = true
+	# use file system watcher for faster status (git 2.37+)
+	fsmonitor = true
+
+[help]
+	# suggest the correct command on typos and ask to run it (git 2.46+)
+	autocorrect = prompt
+
+[user]
+	name = vinhhd
+	email = toilavinh.dev@gmail.com
+
+[init]
+	# default branch name for new repos
+	defaultBranch = master
+
+[push]
+	# auto create upstream on first push (no more --set-upstream)
+	autoSetupRemote = true
+	# push current branch to a same-named remote branch
+	default = current
+	# push annotated tags along with commits
+	followTags = true
+
+[pull]
+	# rebase instead of merge on pull (cleaner history)
+	rebase = true
+
+[fetch]
+	# remove remote-tracking branches deleted on remote
+	prune = true
+	# remove local tags deleted on remote
+	pruneTags = true
+	# fetch from all remotes
+	all = true
+
+[rebase]
+	# auto stash/unstash uncommitted changes around rebase
+	autoStash = true
+	# auto reorder fixup!/squash! commits in rebase -i
+	autoSquash = true
+	# update stacked branches when rebasing (git 2.38+)
+	updateRefs = true
+
+[merge]
+	# show base version in conflict markers (git 2.35+)
+	conflictStyle = zdiff3
+
+[rerere]
+	# remember conflict resolutions and reuse them automatically
+	enabled = true
+
+[diff]
+	# better diff algorithm, more readable output
+	algorithm = histogram
+	# highlight moved lines differently from added/removed
+	colorMoved = default
+	# use i/ w/ c/ prefixes instead of a/ b/
+	mnemonicPrefix = true
+	# detect renamed files
+	renames = true
+
+[commit]
+	# show full diff in the commit message editor
+	verbose = true
+
+[branch]
+	# sort branches by latest commit, newest first
+	sort = -committerdate
+
+[status]
+	# show stash count in git status
+	showStash = true
+
+[tag]
+	# sort tags by version number (v1.2 < v1.10)
+	sort = version:refname
+
+[alias]
+    cfg = config --list --show-origin
+	lg = log --graph --oneline --decorate --all
+	last = log -1 --stat
+	unstage = restore --staged
+	undo = reset --soft HEAD~1
+	amend = commit --amend --no-edit
+	wip = !git add -A && git commit -m "wip"
